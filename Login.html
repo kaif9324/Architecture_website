@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>login</title>
+</head>
+
+<body>
+    <div class="contact-page login-page">
+        <div class="contact-box">
+            <div class="left-table">
+                <form  action="./index.html">
+                    <h2 id="login-page-head" style="text-align: center; font-size: 25px; margin-bottom: 20px;">registration form</h2>
+                    <input type="text" name="" id="name-box" value="" placeholder="Enter name" >
+                    <input type="email" name="" id="" placeholder="email" required>
+                    <input type="password" name="" id="" placeholder="enter password" required>
+
+                    <input type="submit" value="submit" class="login-btn">
+                    <div class="check-box">
+                        <input type="checkbox" name="" id="check" required>
+                        <p>by continuing, i agree to the terms of user & privacy policy</p>
+
+                    </div>
+
+                    <p> <span class="login-text">already have an account ?</span>
+                         <span class="login-btn-a">login here</span></p>
+
+                </form>
+            </div>
+            <script>
+                // ----login  & registraion---
+                const login_btn = document.querySelector(".login-btn-a")
+                const login_text = document.querySelector(".login-text")
+                const nameInput = document.getElementById("name-box")
+                const  login_page_head = document.getElementById("login-page-head")
+
+                login_btn.addEventListener("click", () => {
+                    // login  text convert into registraion 
+
+                    if (login_btn.innerHTML == "login here") {
+                        login_btn.innerHTML = "Registraion"
+                        nameInput.style.display = "none"
+                        login_page_head .innerHTML="Login Detail"
+
+                    }
+                    else {
+                        login_btn.innerHTML = "login here"
+                        nameInput.style.display = "block"
+                        login_page_head .innerHTML="registration form"
+                    }
+                    // login_btn.innerHTML==="Login Here"? :login_btn.innerHTML="Login Here"
+                    login_text.innerHTML === "already have an account ?" ? login_text.innerHTML = "Create a new account" : login_text.innerHTML = "already have an account ?"
+                   
+
+
+                })
+
+             
+            </script>
+</body>
+
+</html>
